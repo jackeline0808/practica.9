@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.contenedor-principal{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    /*Esto sirve para ocultar lo que sobra en el contenedor*/
+    position: relative;
+    height: auto;
+    /*Para que la altura sea dinamica segun el contenido*/
+}
+
+/*Aqui iniciamos el estilo de la barra de navegacion*/
+.navbar{
+    width: 100%;
+    background-color: rgb(185, 112, 253);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+/*Aqui configuramos los item de la lista y colocan horizontalmente*/
+.navbar-menu{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+/*Aqui configuramos los item del menu de navegacion*/
+.navbar-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+}
+/*Aqui personalizamos el menu cuando el mouse pasa por encima*/
+.navbar-link:hover{
+    color: darkblue;
+    font-weight: 600;
+}
+/*Aqui configuramos el logo*/
+.navbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*Menu hamburguesa icono*/
+.navbar-icono{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+/*Ocultar el checkbox del diseño*/
+.menu-toggle{
+    display: none;
+}
+/*Fin del diseño barra de navegacion*/
+
+/*Inicio del carrusel de imagenes*/
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 600px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 2;
+}
+
+/*Configurar el contenedor principal del carrusel*/
+.contenedor-carrusel-imagenes{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    animation: carrusel 10s infinite;
+    height: 100%;
+    transition: transform 0.5 ease-in-out;
+}
+
+
+.contenedor-carrusel-imagenes div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    flex-shrink: 0;
+}
+
+.imagen1{
+    background-image: url(./imagenes/Carrusel/c1.jpeg);
+    position: relative;
+}
+
+.imagen2{
+    background-image: url(./imagenes/Carrusel/c2.jpeg);
+    position: relative;
+}
+
+.imagen3{
+    background-image: url(./imagenes/Carrusel/c3.jpeg);
+    position: relative;
+}
+
+/*===Animacion del carrusel de imagenes===*/
+@keyframes carrusel{
+    0% { transform:translateX(0%) ;}
+    20% { transform: translateX(0%) ;}
+    25% { transform: translateX(-100%) ;}
+    45% { transform: translateX(-200%) ;}
+    70% { transform: translateX(-200%) ;}
+    75% { transform: translateX(-100%) ;}
+    100% { transform: translateX(0%) ;}
+}
+
+
+/*Inicio diseño card de productos 1*/
+.contendor-principal-card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.contenedor-card1{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contenedor-card1 .card-productos1{
+width: 280px;
+height: 300px;
+border-radius: 8px;
+overflow: hidden;
+margin: 20px;
+text-align: center;
+box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+transition: all 0.25s;
+}
+
+.contenedor-card1 .card-productos1 img{
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+}
+.contenedor-card1 .card-productos1:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
+}
+
+.contenedor-card1 .card-productos1 h4{
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.contenedor-card1 .card-productos1 p{
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.contenedor-card1 .card-productos1 a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498bd
+}
+/*Fin diseño car de productos 1*/
+
+
+/*Inicio diseño card de productos 2*/
+.contenedor-card2{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.contenedor-card2 .card-productos2{
+    width: 280px;
+    height: 330px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    object-fit: cover;
+    box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.3);
+    transition: all 0.25s;
+}
+
+.contenedor-card2 .card-productos2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-productos2 .cuerpo-card{
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    transition: all 0.25s;
+    height: 200px;
+}
+
+.card-productos2 .cuerpo-card h4{
+    padding-bottom: 5px;
+}
+
+.card-productos2 .cuerpo-card p{
+    padding: 0 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.card-productos2 .cuerpo-card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498bd;
+}
+
+.contenedor-card2 .card-productos2:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
+}
+/*Fin diseño card de productos 2*/
+
+/*Inicio de diseño footer*/
+footer{
+    background-color:rgb(185, 112, 253);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenedor-footer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido-footer{
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.contenido-footer h4{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contenido-footer p{
+    font-weight: 300;
+}
+
+.contenido-footer img{
+    padding-top: 20px;
+}
+
+.contenido-footer a{
+    padding-left: 5px;
+}
+
+.contenido-footer a img:hover{
+    transform: translateY(-5px);
+}
+/*Fin de diseño footer*/
+
+
+/*Configuramos la pagina de modo responsivo a cualquier dispositivo*/
+@media (max-width: 1024px) {
+    .contenedor-carrusel-imagenes{
+        max-height: 350px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-carrusel-imagenes div{
+        margin-top: 118px;
+        max-height: 350px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    /*Mostramos el icono de hamburguesa*/
+    .navbar-icono{
+        display: block;
+    }
+    /*Ocultar el menu por defecto*/
+    .navbar-menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(185, 112, 253);
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    /*Mostrar el menu cuando damos click*/
+    .menu-toggle:checked ~ .navbar-menu{
+        margin-top: 40px;
+        max-height: 300px;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+
+    /*Ajustar los enlaces del menu de navegacion*/
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-link{
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .contenedor-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido-footer{
+        max-width: 100%;
+    }
+}/*Fin media querie 768px*/
+
+
+
+/*Configuracion media querie 480px*/
+@media (max-width: 480px) {
+    .contenedor-carrusel-imagenes div{
+        max-height: 300px;
+    }
+}
+
+
+/*Fin configuracion media querie 480px*/
+
+
+
